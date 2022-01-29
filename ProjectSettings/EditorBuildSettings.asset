@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/PapaPans' Lobby.unity
-    guid: b3e1ea3eba032d742a69048620f88b64
+    path: Assets/Scenes/MainMenu.unity
+    guid: 0540f68ca91ba4aebbf2ebcb566a1825
   - enabled: 1
     path: Assets/Scenes/PapaPans' scene.unity
     guid: 08c5c153a38902840bf13dec2e0e40e9

@@ -8,6 +8,8 @@ public class PhotonNetworkingLauncher : MonoBehaviourPunCallbacks
 {
     #region Private Serializable Fields
 
+    [SerializeField]
+    private bool _autoStart = false;
 
     #endregion
 
@@ -43,7 +45,8 @@ public class PhotonNetworkingLauncher : MonoBehaviourPunCallbacks
     /// </summary>
     void Start()
     {
-        Connect();
+        if (_autoStart)
+            Connect();
     }
 
 

@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 3692133846744715142}
   - component: {fileID: 2811242240252692334}
   - component: {fileID: 2819964505805528424}
-  - component: {fileID: 2855258902746139952}
-  - component: {fileID: 7489322749359796419}
   m_Layer: 0
   m_Name: BottomTile1x1
   m_TagString: Untagged
@@ -83,28 +81,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2855258902746139952
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5256929176719462740}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.5, y: 0.25, z: 2.5000024}
-  m_Center: {x: -1.2500048, y: 0.125, z: 1.2499988}
---- !u!114 &7489322749359796419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5256929176719462740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5b2c08246f860c448681f581ae013d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

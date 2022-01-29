@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - PlayerManager
+  - Buellet
+  - Bullet
   layers:
   - Default
   - TransparentFX

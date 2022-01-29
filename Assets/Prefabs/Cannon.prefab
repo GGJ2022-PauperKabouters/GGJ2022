@@ -295,7 +295,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3847619659032044186}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03ff24541610f45f082bd7efc8207d85, type: 3}
   m_Name: 
@@ -308,6 +308,10 @@ MonoBehaviour:
   SteerPivot: {fileID: 3847619658074879273}
   BulletPrefab: {fileID: 7494313530730940527, guid: b769f6baa52ca438aafe2e836d97d810, type: 3}
   BulletSpawnPoint: {fileID: 1011941914}
+  textPrefab: {fileID: 0}
+  playermanager: {fileID: 0}
+  maincamera: {fileID: 0}
+  cannoncamera: {fileID: 0}
 --- !u!1 &3847619659333297680
 GameObject:
   m_ObjectHideFlags: 0

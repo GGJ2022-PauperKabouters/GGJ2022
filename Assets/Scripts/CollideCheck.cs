@@ -21,11 +21,10 @@ public class CollideCheck : MonoBehaviour
 
     private void OnCollisionEnter(Collision col)
     {
-       if (col.gameObject.tag == "Bullet")
+        if (col.gameObject.tag == "Bullet")
         {
             rigi.isKinematic = false;
-            Destroy(col.gameObject);
+            //Destroy(col.gameObject);
         }
-
     }
 }

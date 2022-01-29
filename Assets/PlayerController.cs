@@ -3,15 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerManager : MonoBehaviourPun
+public class PlayerController : MonoBehaviourPun
 {
-    
 
-    #region public fields
-    [Tooltip("The local player instance. Use this to know if the local player is represented in the Scene")]
-    public static GameObject LocalPlayerInstance;
-
-    #endregion
+    private bool canMove = true;
 
     #region private fields
 
@@ -20,6 +15,8 @@ public class PlayerManager : MonoBehaviourPun
     #endregion
     // Start is called before the first frame update
     Rigidbody m_Rigidbody;
+
+    private GameObject playermanager;
     void Start()
     {
        
@@ -27,14 +24,19 @@ public class PlayerManager : MonoBehaviourPun
 
     private void Awake()
     {
-       
+       playermanager = GameObject.FindGameObjectsWithTag("PlayerManager")[0];
         m_Rigidbody = gameObject.GetComponent<Rigidbody>();
         // #Important
         // used in GameManager.cs: we keep track of the localPlayer instance to prevent instantiation when levels are synchronized
         if (photonView.IsMine)
         {
-            Debug.LogError("view is mine");
-            PlayerManager.LocalPlayerInstance = this.gameObject;
+            Camera playercam = gameObject.AddComponent<Camera>();
+            playercam.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 30, gameObject.transform.position.z - 20);
+            transform.LookAt(gameObject.transform, Vector3.up);
+            playercam.tag = "MainCamera";
+            playercam.enabled = true;
+            playermanager.GetComponent<CustomPlayerManager>().LocalPlayerInstance = this.gameObject;
+            
         }
         // #Critical
         // we flag as don't destroy on load so that instance survives level synchronization, thus giving a seamless experience when levels load.
@@ -45,10 +47,11 @@ public class PlayerManager : MonoBehaviourPun
     void FixedUpdate()
     {
 
-        ;
+        if (canMove)
+        {
             if (Input.GetAxis("Vertical") > 0)
             {
-            Debug.LogError("forward");
+
                 m_Rigidbody.AddForce(Vector3.forward * 20);
             }
             if (Input.GetAxis("Horizontal") < 0)
@@ -63,7 +66,13 @@ public class PlayerManager : MonoBehaviourPun
             {
                 m_Rigidbody.AddForce(-Vector3.forward * 20);
             }
+        }
         
+    }
+
+    public void setCanMove(bool value)
+    {
+        canMove = value;
     }
     
 }

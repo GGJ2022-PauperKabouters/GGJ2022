@@ -60,20 +60,7 @@ public class CannonController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (GameObject.FindGameObjectsWithTag("Player").Length > 0)
-        {
-            foreach (GameObject o in GameObject.FindGameObjectsWithTag("Player"))
-            {
-                PlayerController controller = o.GetComponent<PlayerController>();
-                if (controller.LocalPlayerInstance == true)
-                {
-                    localPlayer = o;
-                }
-            }
-
-        }
-
-        checkUseCannon();
+       
 
         if (inUse)
         {
@@ -88,10 +75,32 @@ public class CannonController : MonoBehaviour
 
             transform.rotation = Quaternion.Euler(yRotation);
 
-            if (Input.GetKey(KeyCode.Space))
-                SpawnBullet();
+        
 
         }
+    }
+    private void Update()
+    {
+        if (GameObject.FindGameObjectsWithTag("Player").Length > 0)
+        {
+            foreach (GameObject o in GameObject.FindGameObjectsWithTag("Player"))
+            {
+                PlayerController controller = o.GetComponent<PlayerController>();
+                if (controller.LocalPlayerInstance == true)
+                {
+                    localPlayer = o;
+                }
+            }
+
+        }
+
+        if (inUse)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+                SpawnBullet();
+        }
+
+        checkUseCannon();
     }
 
     private int GetInputAxis(KeyCode posKey, KeyCode negKey)

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using ThreeEyedGames.DecaliciousExample;
 using UnityEngine;
 
-public class CannonControllerSimple : MonoBehaviour
+public class CannonController : MonoBehaviour
 {
     public float horizontalSteer = 1;
     public float verticalSteer = 1;
@@ -38,10 +38,45 @@ public class CannonControllerSimple : MonoBehaviour
         initialRotation = SteerPivot.eulerAngles;
         
     }
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject == localPlayer)
+        {
+            Debug.Log("trigger enter");
+            player_inrange = true;
+            floatingtext = showTooltip();
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject == localPlayer)
+        {
+            Debug.Log("trigger exit");
+            player_inrange = false;
+            inUse = false;
+            hideTooltip(floatingtext);
+        }
+    }
     // Update is called once per frame
     void Update()
     {
+        if (GameObject.FindGameObjectsWithTag("Player").Length > 0)
+        {
+            foreach (GameObject o in GameObject.FindGameObjectsWithTag("Player"))
+            {
+                PlayerController controller = o.GetComponent<PlayerController>();
+                if (controller.LocalPlayerInstance == true)
+                {
+                    localPlayer = o;
+                }
+            }
+
+        }
+
+        checkUseCannon();
+
+        if (inUse)
+        {
             Vector3 yRotation = transform.rotation.eulerAngles;
             Vector3 xRotation = SteerPivot.rotation.eulerAngles;
 
@@ -56,7 +91,7 @@ public class CannonControllerSimple : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
                 SpawnBullet();
 
-        
+        }
     }
 
     private int GetInputAxis(KeyCode posKey, KeyCode negKey)
@@ -71,9 +106,43 @@ public class CannonControllerSimple : MonoBehaviour
     {
         GameObject cannonBall = BulletPrefab;
 
-        GameObject spawned = Instantiate(cannonBall, BulletSpawnPoint.position, SteerPivot.rotation);
+        GameObject spawned = PhotonNetwork.Instantiate("CannonBall", BulletSpawnPoint.position, SteerPivot.rotation);
 
         spawned.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0,1,0) * ShotVelocity, ForceMode.VelocityChange);
     }
 
+    private GameObject showTooltip()
+    {
+        Vector3 tooltippos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+       GameObject tooltip = Instantiate(textPrefab, tooltippos,new Quaternion(0,0,0,0));
+        return tooltip;
+    }
+
+    private void checkUseCannon()
+    {
+        if (player_inrange && Input.GetKeyDown(KeyCode.E))
+        {
+            if (inUse == false)
+            {
+                inUse = true;
+                maincamera.enabled = false;
+                cannoncamera.enabled = true;
+                localPlayer.GetComponent<PlayerController>().setLocalPlayerCanMove(false);
+            }
+            else
+            {
+                inUse = false;
+                maincamera.enabled = true;
+                cannoncamera.enabled = false;
+                localPlayer.GetComponent<PlayerController>().setLocalPlayerCanMove(true);
+            }
+        }
+    }
+    private void hideTooltip(GameObject floatingtext)
+    {
+        if (floatingtext != null)
+        {
+            Destroy(floatingtext);
+        }
+    }
 }

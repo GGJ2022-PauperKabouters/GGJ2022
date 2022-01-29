@@ -266,6 +266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3847619659032044166}
   - component: {fileID: 210957165}
+  - component: {fileID: 25748052356071392}
   m_Layer: 0
   m_Name: Cannon
   m_TagString: Untagged
@@ -295,7 +296,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3847619659032044186}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03ff24541610f45f082bd7efc8207d85, type: 3}
   m_Name: 
@@ -309,7 +310,31 @@ MonoBehaviour:
   BulletPrefab: {fileID: 7494313530730940527, guid: b769f6baa52ca438aafe2e836d97d810, type: 3}
   BulletSpawnPoint: {fileID: 1011941914}
   textPrefab: {fileID: 0}
-  playermanager: {fileID: 0}
+  localPlayer: {fileID: 0}
+  maincamera: {fileID: 0}
+  cannoncamera: {fileID: 0}
+--- !u!114 &25748052356071392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3847619659032044186}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adf5c2667b016748858d8b0b8c78db1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalSteer: 1
+  verticalSteer: 1
+  horizontalSteerRange: 90
+  verticalSteerRange: 45
+  ShotVelocity: 15
+  SteerPivot: {fileID: 0}
+  BulletPrefab: {fileID: 7494313530730940527, guid: b769f6baa52ca438aafe2e836d97d810, type: 3}
+  BulletSpawnPoint: {fileID: 0}
+  textPrefab: {fileID: 0}
+  localPlayer: {fileID: 0}
   maincamera: {fileID: 0}
   cannoncamera: {fileID: 0}
 --- !u!1 &3847619659333297680

@@ -33,6 +33,7 @@ public class PlayerManager : MonoBehaviourPun
         // used in GameManager.cs: we keep track of the localPlayer instance to prevent instantiation when levels are synchronized
         if (photonView.IsMine)
         {
+            Debug.LogError("view is mine");
             PlayerManager.LocalPlayerInstance = this.gameObject;
         }
         // #Critical
@@ -41,32 +42,28 @@ public class PlayerManager : MonoBehaviourPun
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-            if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
+
+        ;
+            if (Input.GetAxis("Vertical") > 0)
             {
-                Debug.LogError("photon view is not mine");
-                return;
+            Debug.LogError("forward");
+                m_Rigidbody.AddForce(Vector3.forward * 20);
             }
-            else if (photonView.IsMine == true && PhotonNetwork.IsConnected == true)
+            if (Input.GetAxis("Horizontal") < 0)
             {
-                if (Input.GetKey(KeyCode.W))
-                {
-                    m_Rigidbody.AddForce(Vector3.forward);
-                }
-                if (Input.GetKey(KeyCode.A))
-                {
-                    m_Rigidbody.AddForce(Vector3.left);
-                }
-                if (Input.GetKey(KeyCode.D))
-                {
-                    m_Rigidbody.AddForce(Vector3.right);
-                }
-                if (Input.GetKey(KeyCode.S))
-                {
-                    m_Rigidbody.AddForce(-Vector3.forward);
-                }
+                m_Rigidbody.AddForce(Vector3.left * 20);
             }
-        }
+            if (Input.GetAxis("Horizontal") > 0)
+            {
+                m_Rigidbody.AddForce(Vector3.right * 20);
+            }
+            if (Input.GetAxis("Vertical") < 0)
+            {
+                m_Rigidbody.AddForce(-Vector3.forward * 20);
+            }
+        
+    }
     
 }

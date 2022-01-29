@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1927856222243588469}
   - component: {fileID: 1927856222243588426}
   - component: {fileID: -9035605319800847637}
+  - component: {fileID: 7350523514962684520}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -135,6 +136,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 1927856222243588426}
+  - {fileID: 7350523514962684520}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -166,3 +168,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf50089f8081e848aaf36e2e5676e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7350523514962684520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927856222243588466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizeVelocity: 1
+  m_SynchronizeAngularVelocity: 1
+  m_TeleportEnabled: 0
+  m_TeleportIfDistanceGreaterThan: 3

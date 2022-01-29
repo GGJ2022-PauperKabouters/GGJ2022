@@ -28,11 +28,15 @@ namespace Com.MyCompany.MyGame
 
         private void Start()
         {
-            if (playermanager.GetComponent<CustomPlayerManager>().LocalPlayerInstance == null)
+            
+            if (GameObject.FindGameObjectsWithTag("Player").Length == 0)
             {
                 Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
                 // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
-                PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0f, 5f, -9f), Quaternion.identity, 0);
+
+                byte count = PhotonNetwork.CurrentRoom.PlayerCount;
+                Transform floor =  GameObject.Find("Floor (" + count + ")").transform;
+                PhotonNetwork.Instantiate(this.playerPrefab.name,new Vector3(floor.position.x,floor.position.y + 5f, floor.position.z) , Quaternion.identity, 0);
             }
             else
             {

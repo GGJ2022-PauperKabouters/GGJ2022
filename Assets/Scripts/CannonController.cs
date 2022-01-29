@@ -25,7 +25,7 @@ public class CannonController : MonoBehaviour
     private bool player_inrange;
     private bool inUse;
 
-    public GameObject playermanager;
+    public GameObject localPlayer;
 
     public Camera maincamera;
 
@@ -35,11 +35,11 @@ public class CannonController : MonoBehaviour
     void Start()
     {
         initialRotation = SteerPivot.eulerAngles;
+        
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("collided");
-        if (other.gameObject == playermanager.GetComponent<CustomPlayerManager>().LocalPlayerInstance)
+        if (other.gameObject == localPlayer)
         {
             Debug.Log("trigger enter");
             player_inrange = true;
@@ -48,7 +48,7 @@ public class CannonController : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject == playermanager.GetComponent<CustomPlayerManager>().LocalPlayerInstance)
+        if (other.gameObject == localPlayer)
         {
             Debug.Log("trigger exit");
             player_inrange = false;
@@ -59,6 +59,18 @@ public class CannonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameObject.FindGameObjectsWithTag("Player").Length > 0)
+        {
+            foreach (GameObject o in GameObject.FindGameObjectsWithTag("Player"))
+            {
+                PlayerController controller = o.GetComponent<PlayerController>();
+                if (controller.LocalPlayerInstance == true)
+                {
+                    localPlayer = o;
+                }
+            }
+
+        }
 
         checkUseCannon();
 
@@ -114,14 +126,14 @@ public class CannonController : MonoBehaviour
                 inUse = true;
                 maincamera.enabled = false;
                 cannoncamera.enabled = true;
-                playermanager.GetComponent<CustomPlayerManager>().setLocalPlayerCanMove(false);
+                localPlayer.GetComponent<PlayerController>().setLocalPlayerCanMove(false);
             }
             else
             {
                 inUse = false;
                 maincamera.enabled = true;
                 cannoncamera.enabled = false;
-                playermanager.GetComponent<CustomPlayerManager>().setLocalPlayerCanMove(true);
+                localPlayer.GetComponent<PlayerController>().setLocalPlayerCanMove(true);
             }
 
 

@@ -7,8 +7,8 @@ using UnityEngine;
 
 public class CannonController : MonoBehaviour
 {
-    public float horizontalSteer = 1;
-    public float verticalSteer = 1;
+    public float horizontalSteer = 4;
+    public float verticalSteer = 4;
     public int horizontalSteerRange = 90;
     public int verticalSteerRange = 45;
     public float ShotVelocity = 15;
@@ -26,7 +26,7 @@ public class CannonController : MonoBehaviour
     private bool player_inrange;
     private bool inUse;
 
-    public GameObject localPlayer;
+    private GameObject localPlayer;
 
     public Camera maincamera;
 
@@ -58,7 +58,7 @@ public class CannonController : MonoBehaviour
         }
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (GameObject.FindGameObjectsWithTag("Player").Length > 0)
         {
@@ -88,7 +88,7 @@ public class CannonController : MonoBehaviour
 
             transform.rotation = Quaternion.Euler(yRotation);
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKey(KeyCode.Space))
                 SpawnBullet();
 
         }
@@ -106,7 +106,7 @@ public class CannonController : MonoBehaviour
     {
         GameObject cannonBall = BulletPrefab;
 
-        GameObject spawned = PhotonNetwork.Instantiate("CannonBall", BulletSpawnPoint.position, SteerPivot.rotation);
+        GameObject spawned = Instantiate(cannonBall, BulletSpawnPoint.position, SteerPivot.rotation);
 
         spawned.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0,1,0) * ShotVelocity, ForceMode.VelocityChange);
     }

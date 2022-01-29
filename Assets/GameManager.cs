@@ -19,8 +19,6 @@ namespace Com.MyCompany.MyGame
         [Tooltip("The prefab to use for representing the player")]
         public GameObject playerPrefab;
 
-        public GameObject playermanager;
-
 
         #endregion
         #region Private Methods
@@ -31,12 +29,12 @@ namespace Com.MyCompany.MyGame
             
             if (GameObject.FindGameObjectsWithTag("Player").Length == 0)
             {
-                Debug.LogFormat("We are Instantiating LocalPlayer from {0}", SceneManagerHelper.ActiveSceneName);
+                Debug.Log("We are Instantiating LocalPlayer from {0}");
                 // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
 
                 byte count = PhotonNetwork.CurrentRoom.PlayerCount;
-                Transform floor =  GameObject.Find("Floor (" + count + ")").transform;
-                PhotonNetwork.Instantiate(this.playerPrefab.name,new Vector3(floor.position.x,floor.position.y + 5f, floor.position.z) , Quaternion.identity, 0);
+                Transform floor =  GameObject.Find("PlayerLand (" + count + ")").transform;
+                PhotonNetwork.Instantiate(this.playerPrefab.name,new Vector3(floor.position.x -1f,floor.position.y + 5f, floor.position.z -2f) , Quaternion.identity, 0);
             }
             else
             {

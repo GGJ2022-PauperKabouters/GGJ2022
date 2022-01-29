@@ -50,13 +50,13 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.polybrush": {
-      "version": "https://github.com/needle-mirror/com.unity.polybrush.git",
+      "version": "1.0.2",
       "depth": 0,
-      "source": "git",
+      "source": "registry",
       "dependencies": {
         "com.unity.settings-manager": "1.0.3"
       },
-      "hash": "8689722892f73af7f9ade8560a565a1459916a53"
+      "url": "https://packages.unity.com"
     },
     "com.unity.postprocessing": {
       "version": "3.2.0",

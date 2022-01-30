@@ -334,7 +334,6 @@ MonoBehaviour:
   BulletPrefab: {fileID: 7494313530730940527, guid: b769f6baa52ca438aafe2e836d97d810, type: 3}
   BulletSpawnPoint: {fileID: 0}
   textPrefab: {fileID: 0}
-  localPlayer: {fileID: 0}
   maincamera: {fileID: 0}
   cannoncamera: {fileID: 0}
 --- !u!1 &3847619659333297680

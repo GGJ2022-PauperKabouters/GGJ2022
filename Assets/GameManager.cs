@@ -49,7 +49,8 @@ namespace Com.MyCompany.MyGame
                 }
                 
                 
-                PhotonNetwork.Instantiate(this.playerPrefab.name,new Vector3(floor.localPosition.x,floor.localPosition.y + 5f, floor.position.z +1f) , Quaternion.identity, 0);
+                GameObject playerObj = PhotonNetwork.Instantiate(this.playerPrefab.name,new Vector3(floor.localPosition.x,floor.localPosition.y + 5f, floor.position.z +1f) , Quaternion.identity, 0);
+                playerObj.GetComponentInChildren<PlayerController>().shipController = floor.GetComponent<ShipController>();
 
             }
             else

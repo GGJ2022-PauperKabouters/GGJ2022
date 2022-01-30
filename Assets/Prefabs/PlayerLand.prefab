@@ -54,7 +54,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPriority: 3
+  LightAnimPrefab: {fileID: 0}
   TileObject: {fileID: 0}
+  isCannonTile: 0
 --- !u!65 &8067234116564356365
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -831,7 +833,7 @@ Transform:
   - {fileID: 5108615771092001636}
   - {fileID: 4651030954065546073}
   m_Father: {fileID: 8285834778358825318}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &7446494144396081389
 BoxCollider:
@@ -908,7 +910,7 @@ Transform:
   - {fileID: 5108615771383308118}
   - {fileID: 4651030953836902251}
   m_Father: {fileID: 8285834778358825318}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &7446494144088114399
 BoxCollider:
@@ -985,7 +987,7 @@ Transform:
   - {fileID: 5108615770593476088}
   - {fileID: 4651030953616430533}
   m_Father: {fileID: 8285834778358825318}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &7446494145004840561
 BoxCollider:
@@ -1062,7 +1064,7 @@ Transform:
   - {fileID: 5108615772138657376}
   - {fileID: 4651030955161665117}
   m_Father: {fileID: 8285834778358825318}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &7446494145481068009
 BoxCollider:
@@ -1139,7 +1141,7 @@ Transform:
   - {fileID: 5108615772463570136}
   - {fileID: 4651030954900452581}
   m_Father: {fileID: 8285834778358825318}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &7446494145163724625
 BoxCollider:
@@ -1216,7 +1218,7 @@ Transform:
   - {fileID: 5108615772316682949}
   - {fileID: 4651030955055457016}
   m_Father: {fileID: 8285834778358825318}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &7446494145050333516
 BoxCollider:
@@ -1293,7 +1295,7 @@ Transform:
   - {fileID: 5108615772357067516}
   - {fileID: 4651030955077987009}
   m_Father: {fileID: 8285834778358825318}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &7446494145128536437
 BoxCollider:
@@ -1370,7 +1372,7 @@ Transform:
   - {fileID: 5108615771503079584}
   - {fileID: 4651030954795587741}
   m_Father: {fileID: 8285834778358825318}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &7446494145847405353
 BoxCollider:
@@ -1447,7 +1449,7 @@ Transform:
   - {fileID: 5108615771819638017}
   - {fileID: 4651030954541684028}
   m_Father: {fileID: 8285834778358825318}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &7446494145664837256
 BoxCollider:
@@ -2544,7 +2546,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPriority: 1
+  LightAnimPrefab: {fileID: 0}
   TileObject: {fileID: 800834651508392947}
+  isCannonTile: 0
 --- !u!65 &1391044883457485359
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2612,7 +2616,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPriority: 3
+  LightAnimPrefab: {fileID: 0}
   TileObject: {fileID: 0}
+  isCannonTile: 0
 --- !u!65 &824191494978796464
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4112,6 +4118,7 @@ Transform:
   m_LocalPosition: {x: -23.393, y: 14.8, z: 14.549}
   m_LocalScale: {x: 1.2715867, y: 1.2715867, z: 1.2715867}
   m_Children:
+  - {fileID: 2054428961383148290}
   - {fileID: 5247976145217322676}
   - {fileID: 5247976146028286763}
   - {fileID: 4238037220210943414}
@@ -4197,7 +4204,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPriority: 3
+  LightAnimPrefab: {fileID: 0}
   TileObject: {fileID: 0}
+  isCannonTile: 0
 --- !u!65 &8517954110654749085
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4265,7 +4274,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPriority: 2
+  LightAnimPrefab: {fileID: 0}
   TileObject: {fileID: 800834651690135983}
+  isCannonTile: 0
 --- !u!65 &6970464607613035803
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5057,7 +5068,7 @@ Transform:
   - {fileID: 4834302169256480889}
   - {fileID: 2036336368140203398}
   m_Father: {fileID: 8285834778358825318}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3110570296302377175
 GameObject:
@@ -5113,7 +5124,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPriority: 3
+  LightAnimPrefab: {fileID: 0}
   TileObject: {fileID: 0}
+  isCannonTile: 0
 --- !u!65 &583927524296899022
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7266,7 +7279,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPriority: 1
+  LightAnimPrefab: {fileID: 0}
   TileObject: {fileID: 5076680015594707335}
+  isCannonTile: 0
 --- !u!65 &3473472483131301760
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8396,7 +8411,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPriority: 3
+  LightAnimPrefab: {fileID: 0}
   TileObject: {fileID: 0}
+  isCannonTile: 0
 --- !u!65 &335680120026077318
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8464,7 +8481,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPriority: 2
+  LightAnimPrefab: {fileID: 0}
   TileObject: {fileID: 800834649953919595}
+  isCannonTile: 0
 --- !u!65 &4752199309861515733
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8532,7 +8551,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPriority: 3
+  LightAnimPrefab: {fileID: 0}
   TileObject: {fileID: 0}
+  isCannonTile: 0
 --- !u!65 &6124315420910665212
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8600,7 +8621,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPriority: 1
+  LightAnimPrefab: {fileID: 0}
   TileObject: {fileID: 800834652044672014}
+  isCannonTile: 0
 --- !u!65 &8054140208256039686
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8649,7 +8672,7 @@ Transform:
   - {fileID: 979992030966273074}
   - {fileID: 5564304319066566120}
   m_Father: {fileID: 8285834778358825318}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1989141677087833328
 Rigidbody:
@@ -8727,7 +8750,7 @@ Transform:
   - {fileID: 979992031238486445}
   - {fileID: 5564304319349112951}
   m_Father: {fileID: 8285834778358825318}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!54 &1989141676276650351
 Rigidbody:
@@ -9553,7 +9576,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPriority: 1
+  LightAnimPrefab: {fileID: 0}
   TileObject: {fileID: 3498976535437583570}
+  isCannonTile: 0
 --- !u!65 &1718481424360596609
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9695,7 +9720,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPriority: 3
+  LightAnimPrefab: {fileID: 0}
   TileObject: {fileID: 0}
+  isCannonTile: 0
 --- !u!65 &9017047923351539853
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9763,7 +9790,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPriority: 3
+  LightAnimPrefab: {fileID: 0}
   TileObject: {fileID: 0}
+  isCannonTile: 0
 --- !u!65 &353151887708075272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9831,7 +9860,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPriority: 2
+  LightAnimPrefab: {fileID: 0}
   TileObject: {fileID: 800834650579205367}
+  isCannonTile: 0
 --- !u!65 &3603958120442097997
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10628,7 +10659,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPriority: 3
+  LightAnimPrefab: {fileID: 0}
   TileObject: {fileID: 0}
+  isCannonTile: 0
 --- !u!65 &7847058790911092953
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10858,7 +10891,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPriority: 2
+  LightAnimPrefab: {fileID: 0}
   TileObject: {fileID: 800834651413449674}
+  isCannonTile: 0
 --- !u!65 &1211323160325486956
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10872,6 +10907,89 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.4999995, y: 0.3, z: 2.500002}
   m_Center: {x: -1.2500007, y: 0.12499999, z: 1.2499957}
+--- !u!1 &7707789409604940555
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2054428961383148290}
+  - component: {fileID: 4406918792416814223}
+  - component: {fileID: 9013214638657103406}
+  m_Layer: 0
+  m_Name: Camera (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2054428961383148290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7707789409604940555}
+  m_LocalRotation: {x: 0.2106356, y: 0.0000015497205, z: -0.00000033341345, w: 0.9775647}
+  m_LocalPosition: {x: 0.38722658, y: 5.272136, z: -4.3972197}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8285834778358825318}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 24.319, y: 0, z: 0}
+--- !u!20 &4406918792416814223
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7707789409604940555}
+  m_Enabled: 0
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!81 &9013214638657103406
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7707789409604940555}
+  m_Enabled: 1
 --- !u!1 &7972315657863063059
 GameObject:
   m_ObjectHideFlags: 0
@@ -10926,7 +11044,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPriority: 1
+  LightAnimPrefab: {fileID: 0}
   TileObject: {fileID: 5076680015312286744}
+  isCannonTile: 0
 --- !u!65 &586908188339861913
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10994,7 +11114,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPriority: 3
+  LightAnimPrefab: {fileID: 0}
   TileObject: {fileID: 0}
+  isCannonTile: 0
 --- !u!65 &3902858053123957566
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11062,7 +11184,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPriority: 2
+  LightAnimPrefab: {fileID: 0}
   TileObject: {fileID: 800834650199350873}
+  isCannonTile: 0
 --- !u!65 &6180748222862697788
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12025,7 +12149,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPriority: 2
+  LightAnimPrefab: {fileID: 0}
   TileObject: {fileID: 800834651055593327}
+  isCannonTile: 0
 --- !u!65 &7526997383546314720
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12048,7 +12174,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8483826692308094302, guid: e05412826657542e9be163cdda4930cc, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8483826692308094302, guid: e05412826657542e9be163cdda4930cc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12096,13 +12222,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e05412826657542e9be163cdda4930cc, type: 3}
---- !u!4 &4238037220210943414 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8483826692308094302, guid: e05412826657542e9be163cdda4930cc, type: 3}
-  m_PrefabInstance: {fileID: 5722970154322553064}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3498976535437583570 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9215156031856954426, guid: e05412826657542e9be163cdda4930cc, type: 3}
+  m_PrefabInstance: {fileID: 5722970154322553064}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4238037220210943414 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8483826692308094302, guid: e05412826657542e9be163cdda4930cc, type: 3}
   m_PrefabInstance: {fileID: 5722970154322553064}
   m_PrefabAsset: {fileID: 0}

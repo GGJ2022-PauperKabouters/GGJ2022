@@ -14,8 +14,6 @@ public class PlayerController : MonoBehaviourPun
     public float jumpModifier;
     public float raycastDist;
 
-    public Camera mainCamera;
-
     public ShipController shipController;
 
     #region private fields
@@ -32,7 +30,7 @@ public class PlayerController : MonoBehaviourPun
     void Start()
     {
         m_Animator = GetComponent<Animator>();
-        m_HarpoonController = GetComponent<HarpoonController>();
+        m_HarpoonController = GetComponentInChildren<HarpoonController>();
         // Start is called before the first frame update
     }
 
@@ -114,7 +112,6 @@ public class PlayerController : MonoBehaviourPun
                 }
                 if (Input.GetKeyDown(KeyCode.Space) && _isGrounded())
                 {
-                    Debug.Log("Jumping");
                     var velocity = m_Rigidbody.velocity;
                     velocity.y = 0;
                     m_Rigidbody.velocity = velocity;
@@ -144,7 +141,7 @@ public class PlayerController : MonoBehaviourPun
     private IEnumerator HarpoonTransition(bool activated)
     {
         m_HarpoonController.harpoonCamera.gameObject.SetActive(activated);
-        mainCamera.enabled = !activated;
+        shipController.GetComponentInChildren<Camera>().enabled = !activated;
         
         // Wait for the transition animation to complete before the player can move again
         yield return new WaitForSeconds(0.25f);

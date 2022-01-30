@@ -15,7 +15,7 @@ public class FloatingTile : MonoBehaviour
     void Start()
     {
         m_Rigidbody = GetComponent<Rigidbody>();
-        m_LineRenderer = GetComponent<LineRenderer>();
+        //m_LineRenderer = GetComponent<LineRenderer>();
         _initialScale = transform.localScale;
     }
 
@@ -26,7 +26,7 @@ public class FloatingTile : MonoBehaviour
             _attractDuration += Time.deltaTime;
             
             // Update the line between tile and player
-            m_LineRenderer.SetPositions(new Vector3[]{transform.position, _playerTransform.position});
+            //m_LineRenderer.SetPositions(new Vector3[]{transform.position, _playerTransform.position});
 
             Vector3 direction = _playerTransform.position - transform.position;
             if (_attractDuration <= 1f)
@@ -63,7 +63,7 @@ public class FloatingTile : MonoBehaviour
         m_Rigidbody.angularVelocity = Random.rotation.eulerAngles * 0.004f;
         GetComponent<BoxCollider>().enabled = false;
         
-        m_LineRenderer.SetPositions(new Vector3[]{transform.position, _playerTransform.position});
-        m_LineRenderer.enabled = true;
+        //m_LineRenderer.SetPositions(new Vector3[]{transform.position, _playerTransform.position});
+        //m_LineRenderer.enabled = true;
     }
 }

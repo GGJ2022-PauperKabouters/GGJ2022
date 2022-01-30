@@ -107,7 +107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7368255075009350719}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.32999998, z: -2.245}
+  m_LocalPosition: {x: 0, y: 1.363, z: -2.622}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 447416769642307407}
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalSteer: 50
-  verticalSteer: 1.5
+  verticalSteer: 4
   shotCooldown: 0
   shotDistance: 100
   shotDelay: 0

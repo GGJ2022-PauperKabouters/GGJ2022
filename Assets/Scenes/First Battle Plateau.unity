@@ -13717,10 +13717,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 306776302306276851, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 330081563735509020, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 571363892266619747, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
+    - target: {fileID: 740282109043747407, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 800834649953919595, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -13757,6 +13769,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1205862958398269260, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 1292725599692789373, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -13777,14 +13793,30 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2521904063782972671, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 3110570296302377175, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3246442725888315061, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
+    - target: {fileID: 3470024751467254820, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 3498976535437583570, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3764509348782485545, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 4082413596365268171, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: maincamera
       value: 
@@ -13793,10 +13825,18 @@ PrefabInstance:
       propertyPath: maincamera
       value: 
       objectReference: {fileID: 1173095285}
+    - target: {fileID: 4092967506342907688, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 4403485105396479457, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4596138669332068029, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 4662785957325514999, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -13821,6 +13861,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5314120581271031235, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 5434329232486198702, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -13833,18 +13877,46 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6575442560115290117, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 6579455808339753361, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6891187238596055308, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 6899404980742317397, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7180596403591633743, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
+    - target: {fileID: 7272270652707510770, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
+    - target: {fileID: 7366184386526160940, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
+    - target: {fileID: 7423060134565551753, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 7567187394885544617, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7603487301950378841, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 7972315657863063059, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -13901,6 +13973,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8355460340414738869, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
+    - target: {fileID: 8874806589700966970, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
+    - target: {fileID: 9204477750796891320, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 9205675925383280554, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -16371,10 +16455,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 306776302306276851, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 330081563735509020, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 571363892266619747, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
+    - target: {fileID: 740282109043747407, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 800834649953919595, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -16411,6 +16507,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1205862958398269260, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 1292725599692789373, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -16431,14 +16531,30 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2521904063782972671, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 3110570296302377175, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3246442725888315061, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
+    - target: {fileID: 3470024751467254820, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 3498976535437583570, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3764509348782485545, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 4082413596365268171, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: maincamera
       value: 
@@ -16447,10 +16563,18 @@ PrefabInstance:
       propertyPath: maincamera
       value: 
       objectReference: {fileID: 1409579549}
+    - target: {fileID: 4092967506342907688, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 4403485105396479457, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4596138669332068029, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 4662785957325514999, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -16475,6 +16599,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5314120581271031235, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 5434329232486198702, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -16487,18 +16615,46 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6575442560115290117, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 6579455808339753361, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6891187238596055308, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 6899404980742317397, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7180596403591633743, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
+    - target: {fileID: 7272270652707510770, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
+    - target: {fileID: 7366184386526160940, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
+    - target: {fileID: 7423060134565551753, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 7567187394885544617, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7603487301950378841, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 7707789409604940555, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Name
       value: Camera (2)
@@ -16559,6 +16715,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8355460340414738869, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
+    - target: {fileID: 8874806589700966970, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
+    - target: {fileID: 9204477750796891320, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 9205675925383280554, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -17248,10 +17416,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 306776302306276851, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 330081563735509020, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 571363892266619747, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
+    - target: {fileID: 740282109043747407, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 800834649953919595, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -17288,6 +17468,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1205862958398269260, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 1292725599692789373, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -17308,14 +17492,30 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2521904063782972671, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 3110570296302377175, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3246442725888315061, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
+    - target: {fileID: 3470024751467254820, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 3498976535437583570, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3764509348782485545, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 4082413596365268171, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: maincamera
       value: 
@@ -17324,10 +17524,18 @@ PrefabInstance:
       propertyPath: maincamera
       value: 
       objectReference: {fileID: 1486031131}
+    - target: {fileID: 4092967506342907688, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 4403485105396479457, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4596138669332068029, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 4662785957325514999, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -17352,6 +17560,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5314120581271031235, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 5434329232486198702, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -17364,18 +17576,46 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6575442560115290117, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 6579455808339753361, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6891187238596055308, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 6899404980742317397, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7180596403591633743, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
+    - target: {fileID: 7272270652707510770, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
+    - target: {fileID: 7366184386526160940, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
+    - target: {fileID: 7423060134565551753, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 7567187394885544617, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7603487301950378841, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 7707789409604940555, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Name
       value: Camera (3)
@@ -17436,6 +17676,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8355460340414738869, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
+    - target: {fileID: 8874806589700966970, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
+    - target: {fileID: 9204477750796891320, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
+      propertyPath: LightAnimPrefab
+      value: 
+      objectReference: {fileID: 3509764172278268047, guid: 47aaaf6ec71e842569af69422b2f055e, type: 3}
     - target: {fileID: 9205675925383280554, guid: ec3d9599762ab419ea581d489ca84efb, type: 3}
       propertyPath: m_Layer
       value: 7

@@ -1069,14 +1069,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3847619658074879273, guid: 9e3f6bc325471439393500882be8ac97, type: 3}
   m_PrefabInstance: {fileID: 8486115899449328982}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &4657215434625204187 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3847619658944739981, guid: 9e3f6bc325471439393500882be8ac97, type: 3}
-  m_PrefabInstance: {fileID: 8486115899449328982}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8486115898437519180 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1011941914, guid: 9e3f6bc325471439393500882be8ac97, type: 3}
+  m_PrefabInstance: {fileID: 8486115899449328982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4657215434625204187 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3847619658944739981, guid: 9e3f6bc325471439393500882be8ac97, type: 3}
   m_PrefabInstance: {fileID: 8486115899449328982}
   m_PrefabAsset: {fileID: 0}
 --- !u!136 &2611497780245452611
@@ -1093,3 +1093,42 @@ CapsuleCollider:
   m_Height: 10.71228
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7276832861240055190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4657215434537494476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 301176702904441758}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &301176702904441758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4657215434537494476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1

@@ -1,7 +1,6 @@
 using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -72,21 +71,21 @@ public class PlayerController : MonoBehaviourPun
             {
                 if (Input.GetAxis("Vertical") > 0 )
                 {
-                    m_Rigidbody.MovePosition(m_Rigidbody.position + Vector3.forward * (Time.fixedDeltaTime + moveModifier));
+                    m_Rigidbody.MovePosition(m_Rigidbody.position + transform.forward * (Time.fixedDeltaTime + moveModifier));
 
 
                 }
                 if (Input.GetAxis("Vertical") < 0)
                 {
-                    m_Rigidbody.MovePosition(m_Rigidbody.position -Vector3.forward * (Time.fixedDeltaTime + moveModifier));
+                    m_Rigidbody.MovePosition(m_Rigidbody.position -transform.forward * (Time.fixedDeltaTime + moveModifier));
                 }
                 if (Input.GetAxis("Horizontal") > 0 )
                 {
-                    m_Rigidbody.MovePosition(m_Rigidbody.position + Vector3.right * (Time.fixedDeltaTime + moveModifier));
+                    m_Rigidbody.MovePosition(m_Rigidbody.position + transform.right * (Time.fixedDeltaTime + moveModifier));
                 }
                 if (Input.GetAxis("Horizontal") < 0)
                 {
-                    m_Rigidbody.MovePosition(m_Rigidbody.position + Vector3.left * (Time.fixedDeltaTime + moveModifier));
+                    m_Rigidbody.MovePosition(m_Rigidbody.position - transform.right * (Time.fixedDeltaTime + moveModifier));
                 }
 
                

@@ -40,7 +40,7 @@ public class FloatingTile : MonoBehaviour
                 transform.localScale = new Vector3(_initialScale.x * progress * 2, _initialScale.y * progress * 2, _initialScale.z * progress * 2);
             
             // Player obtains the tile when it gets too close
-            if (distanceToPlayer < 0.4f)
+            if (distanceToPlayer < 1f)
             {
                 _playerTransform.GetComponent<PlayerController>().OnTileObtained();
                 Destroy(gameObject);
@@ -61,8 +61,9 @@ public class FloatingTile : MonoBehaviour
 
         //give it a lil bit of a spin
         m_Rigidbody.angularVelocity = Random.rotation.eulerAngles * 0.004f;
+        GetComponent<BoxCollider>().enabled = false;
         
-        
+        m_LineRenderer.SetPositions(new Vector3[]{transform.position, _playerTransform.position});
         m_LineRenderer.enabled = true;
     }
 }

@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviourPun
 
     public Camera mainCamera;
 
+    public ShipController shipController;
+
     #region private fields
 
 
@@ -156,5 +158,6 @@ public class PlayerController : MonoBehaviourPun
     public void OnTileObtained()
     {
         Debug.Log("Player obtained a tile!");
+        shipController.AddTile();
     }
 }

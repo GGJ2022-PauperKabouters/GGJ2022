@@ -38,9 +38,16 @@ namespace Com.MyCompany.MyGame
                 for (int i = 0; i < cameras.Length; i++)
                 {
                     Camera cam = cameras[i];
-                    cam.enabled = false;
+                    if (cam.name == "Camera (" + count + ")")
+                    {
+                        cam.enabled = true;
+                    }
+                    else
+                    {
+                        cam.enabled = false;
+                    }
                 }
-                GameObject.Find("Camera ("+count + ")").gameObject.SetActive(true);
+                
                 
                 PhotonNetwork.Instantiate(this.playerPrefab.name,new Vector3(floor.localPosition.x,floor.localPosition.y + 5f, floor.position.z +1f) , Quaternion.identity, 0);
 

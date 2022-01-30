@@ -115,7 +115,7 @@ public class CannonController : MonoBehaviour
     {
         GameObject cannonBall = BulletPrefab;
 
-        GameObject spawned = Instantiate(cannonBall, BulletSpawnPoint.position, SteerPivot.rotation);
+        GameObject spawned = PhotonNetwork.Instantiate("CannonBall", BulletSpawnPoint.position, SteerPivot.rotation);
 
         spawned.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0,1,0) * ShotVelocity, ForceMode.VelocityChange);
     }

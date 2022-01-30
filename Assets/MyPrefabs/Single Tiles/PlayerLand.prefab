@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1267187784989727712
 Transform:
   m_ObjectHideFlags: 0
@@ -39,7 +39,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 53889970571104059}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -647,9 +647,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: CannonTile1x1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8475709375853345462, guid: d0d0838b0870b0a40a5d9e7517650c68, type: 3}
+      propertyPath: maincamera
+      value: 
+      objectReference: {fileID: 7487100859248557120}
     - target: {fileID: 8486115897554236883, guid: d0d0838b0870b0a40a5d9e7517650c68, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0d0838b0870b0a40a5d9e7517650c68, type: 3}
@@ -779,11 +783,28 @@ PrefabInstance:
       propertyPath: m_Name
       value: CannonTile1x1
       objectReference: {fileID: 0}
+    - target: {fileID: 8475709375853345462, guid: d0d0838b0870b0a40a5d9e7517650c68, type: 3}
+      propertyPath: maincamera
+      value: 
+      objectReference: {fileID: 7487100859248557120}
+    - target: {fileID: 8486115899255436859, guid: d0d0838b0870b0a40a5d9e7517650c68, type: 3}
+      propertyPath: maincamera
+      value: 
+      objectReference: {fileID: 7487100859248557120}
+    - target: {fileID: 8486115899255436859, guid: d0d0838b0870b0a40a5d9e7517650c68, type: 3}
+      propertyPath: cannoncamera
+      value: 
+      objectReference: {fileID: 9132979244506965047}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0d0838b0870b0a40a5d9e7517650c68, type: 3}
 --- !u!4 &2604859775706436039 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 426979070757129558, guid: d0d0838b0870b0a40a5d9e7517650c68, type: 3}
+  m_PrefabInstance: {fileID: 2434966467573111953}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &9132979244506965047 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 6878229329868011686, guid: d0d0838b0870b0a40a5d9e7517650c68, type: 3}
   m_PrefabInstance: {fileID: 2434966467573111953}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2434966467596781823

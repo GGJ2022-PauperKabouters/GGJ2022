@@ -71,22 +71,23 @@ public class PlayerController : MonoBehaviourPun
 
             if (canMove)
             {
-                if (Input.GetAxis("Vertical") > 0 && _isGrounded())
+                if (Input.GetAxis("Vertical") > 0 )
                 {
+                    m_Rigidbody.MovePosition(m_Rigidbody.position + Vector3.forward * (Time.fixedDeltaTime + moveModifier));
 
-                    transform.Translate(Vector3.forward * moveModifier);
+
                 }
-                if (Input.GetAxis("Vertical") < 0 && _isGrounded())
+                if (Input.GetAxis("Vertical") < 0)
                 {
-                    transform.Translate(-Vector3.forward * moveModifier);
+                    m_Rigidbody.MovePosition(m_Rigidbody.position -Vector3.forward * (Time.fixedDeltaTime + moveModifier));
                 }
-                if (Input.GetAxis("Horizontal") > 0 && _isGrounded())
+                if (Input.GetAxis("Horizontal") > 0 )
                 {
-                    transform.Translate(Vector3.right * moveModifier);
+                    m_Rigidbody.MovePosition(m_Rigidbody.position + Vector3.right * (Time.fixedDeltaTime + moveModifier));
                 }
-                if (Input.GetAxis("Horizontal") < 0 && _isGrounded())
+                if (Input.GetAxis("Horizontal") < 0)
                 {
-                    transform.Translate(Vector3.left * moveModifier);
+                    m_Rigidbody.MovePosition(m_Rigidbody.position + Vector3.left * (Time.fixedDeltaTime + moveModifier));
                 }
 
                

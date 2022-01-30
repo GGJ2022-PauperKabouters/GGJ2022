@@ -28,7 +28,7 @@ public class HarpoonController : MonoBehaviour
     void Start()
     {
         playerController = transform.parent.GetComponent<PlayerController>();
-        m_Animator = transform.parent.GetComponent<Animator>();
+        m_Animator = playerController.GetComponent<Animator>();
     }
 
     void Update()

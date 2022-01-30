@@ -45,7 +45,7 @@ namespace Com.MyCompany.MyGame
 
                         
 
-                        GameObject playerObj = PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(floor.localPosition.x, floor.localPosition.y + 5f, floor.position.z + 1f), Quaternion.Euler(cam.transform.forward), 0);
+                        GameObject playerObj = PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(floor.localPosition.x, floor.localPosition.y + 5f, floor.position.z + 1f), Quaternion.Euler(0, cam.transform.eulerAngles.y, 0), 0);
                   
 
                         return;

@@ -72,7 +72,7 @@ namespace Com.MyCompany.MyGame
         /// </summary>
         public override void OnLeftRoom()
         {
-            SceneManager.LoadScene(0);
+            //SceneManager.LoadScene(0);
         }
 
         #region Photon Callbacks

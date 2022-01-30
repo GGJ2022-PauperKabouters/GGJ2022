@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/First Battle Plateau.unity
     guid: a3bfb9551950a04468253f6946dc3a9b
+  - enabled: 1
+    path: Assets/Scenes/DeathMenu.unity
+    guid: 6035b42f9f9462140b813b44196032f0
   m_configObjects: {}

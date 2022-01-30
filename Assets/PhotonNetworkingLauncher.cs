@@ -85,8 +85,10 @@ public class PhotonNetworkingLauncher : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
         Debug.Log("Connected to master");
+        RoomOptions roomOptions = new RoomOptions();
+        roomOptions.MaxPlayers = 3;
         // #Critical: The first we try to do is to join a potential existing room. If there is, good, else, we'll be called back with OnJoinRandomFailed()
-        PhotonNetwork.JoinOrCreateRoom("Pans",new RoomOptions(),TypedLobby.Default);
+        PhotonNetwork.JoinOrCreateRoom("Pans",roomOptions,TypedLobby.Default);
     }
 
 
@@ -97,10 +99,12 @@ public class PhotonNetworkingLauncher : MonoBehaviourPunCallbacks
 
     public override void OnJoinRandomFailed(short returnCode, string message)
     {
-        Debug.Log("PUN Basics Tutorial/Launcher:OnJoinRandomFailed() was called by PUN. No random room available, so we create one.\nCalling: PhotonNetwork.CreateRoom");
+        //Debug.Log("PUN Basics Tutorial/Launcher:OnJoinRandomFailed() was called by PUN. No random room available, so we create one.\nCalling: PhotonNetwork.CreateRoom");
 
         // #Critical: we failed to join a random room, maybe none exists or they are all full. No worries, we create a new room.
-       // PhotonNetwork.CreateRoom("Pans", new RoomOptions());
+        RoomOptions roomOptions = new RoomOptions();
+        roomOptions.MaxPlayers = 3;
+        PhotonNetwork.CreateRoom("Pans", roomOptions);
     }
 
     public override void OnJoinedRoom()

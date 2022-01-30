@@ -24,6 +24,7 @@ public class CollideCheck : MonoBehaviour
         if (col.gameObject.tag == "Bullet")
         {
             rigi.isKinematic = false;
+            col.gameObject.AddComponent<FloatingTile>();
             //Destroy(col.gameObject);
         }
     }

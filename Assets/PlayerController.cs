@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Animations;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviourPun
 {
@@ -118,6 +119,13 @@ public class PlayerController : MonoBehaviourPun
                     m_Rigidbody.AddForce(Vector3.up * jumpModifier, ForceMode.VelocityChange);
                     m_Animator.SetTrigger("Jump");
                 }
+            }
+
+            if(transform.position.y < 0)
+            {
+                Destroy(gameObject);
+                PhotonNetwork.LeaveRoom();
+                SceneManager.LoadScene("DeathMenu");
             }
         }
     }

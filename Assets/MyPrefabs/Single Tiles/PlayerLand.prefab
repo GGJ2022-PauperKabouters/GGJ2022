@@ -92,6 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2166212185056783893}
+  - component: {fileID: 2047623413097578278}
   m_Layer: 0
   m_Name: PlayerLand
   m_TagString: Untagged
@@ -126,6 +127,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2047623413097578278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8157781561254013611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd4df10825f946739b6948ad39be6da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floorTilePrefab: {fileID: 5054520457395508771, guid: b180d3e6f515a1e4da4f8036b8b8c4c0, type: 3}
+  cannonTilePrefab: {fileID: 813916641634338810, guid: d0d0838b0870b0a40a5d9e7517650c68, type: 3}
+  SpawnPointParent: {fileID: 8157781561254013611}
 --- !u!1001 &1898622764842442114
 PrefabInstance:
   m_ObjectHideFlags: 0

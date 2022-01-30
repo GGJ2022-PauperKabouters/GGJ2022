@@ -1,12 +1,18 @@
 using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviourPun
 {
     public GameObject LocalPlayerInstance;
     private bool canMove = true;
+
+    public int moveForce;
+    public float jumpForce;
+    public Transform meshTransform;
+    public float raycastDist;
 
     #region private fields
 
@@ -15,6 +21,7 @@ public class PlayerController : MonoBehaviourPun
     #endregion
     // Start is called before the first frame update
     Rigidbody m_Rigidbody;
+    public Animator m_Animator;
 
     private GameObject playermanager;
     void Start()
@@ -59,24 +66,45 @@ public class PlayerController : MonoBehaviourPun
                 if (Input.GetAxis("Vertical") > 0)
                 {
 
-                    m_Rigidbody.AddForce(Vector3.forward * 20);
+                    m_Rigidbody.AddForce(Vector3.forward * moveForce);
                 }
                 if (Input.GetAxis("Horizontal") < 0)
                 {
-                    m_Rigidbody.AddForce(Vector3.left * 20);
+                    m_Rigidbody.AddForce(Vector3.left * moveForce);
                 }
                 if (Input.GetAxis("Horizontal") > 0)
                 {
-                    m_Rigidbody.AddForce(Vector3.right * 20);
+                    m_Rigidbody.AddForce(Vector3.right * moveForce);
                 }
                 if (Input.GetAxis("Vertical") < 0)
                 {
-                    m_Rigidbody.AddForce(-Vector3.forward * 20);
+                    m_Rigidbody.AddForce(-Vector3.forward * moveForce);
                 }
+
+                if (Input.GetKeyDown(KeyCode.Space) && _isGrounded())
+                {
+                    Debug.Log("Jumping");
+                    var velocity = m_Rigidbody.velocity;
+                    velocity.y = 0;
+                    m_Rigidbody.velocity = velocity;
+                    m_Rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
+                    m_Animator.SetTrigger("Jump");
+                }
+                
             }
         }
+        
+        //meshTransform.LookAt(m_Rigidbody.velocity);
+        //var dir = m_Rigidbody.velocity;
+        //float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        //meshTransform.rotation = Quaternion.Euler(new Vector3(0,0, 0));
+    }
 
-        }
+    private bool _isGrounded()
+    {
+        return Physics.Raycast(transform.position, Vector3.down, raycastDist, LayerMask.GetMask("Floor"));
+    }
+    
     public void setLocalPlayerCanMove(bool value)
     {
         LocalPlayerInstance.GetComponent<PlayerController>().canMove = value;

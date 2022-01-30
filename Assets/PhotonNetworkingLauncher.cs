@@ -113,7 +113,7 @@ public class PhotonNetworkingLauncher : MonoBehaviourPunCallbacks
 
             // #Critical
             // Load the Room Level.
-            PhotonNetwork.LoadLevel("PapaPans' Scene");
+            PhotonNetwork.LoadLevel("First Battle Plateau");
         }
     }
 

@@ -42,18 +42,12 @@ namespace Com.MyCompany.MyGame
                     if (cam.name == "Camera (" + count + ")")
                     {
                         cam.enabled = true;
-                        
-                                           GameObject playerObj = PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(floor.localPosition.x, floor.localPosition.y + 5f, floor.position.z + 1f), cam.transform.rotation, 0);
-                        
-                        playerObj.GetComponentInChildren<PlayerController>().shipController = floor.GetComponent<ShipController>();
 
-                        Vector3 fwd = cam.transform.forward;
-                        fwd.y = 0;
-                        if (fwd.sqrMagnitude != 0.0f)
-                        {
-                            fwd.Normalize();
-                            playerObj.transform.LookAt(transform.position + fwd);
-                        }
+                        
+
+                        GameObject playerObj = PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(floor.localPosition.x, floor.localPosition.y + 5f, floor.position.z + 1f), Quaternion.Euler(cam.transform.forward), 0);
+                  
+
                         return;
                     }
                     else

@@ -1186,7 +1186,10 @@ MonoBehaviour:
   jumpForce: 0
   meshTransform: {fileID: 0}
   raycastDist: 0
+  mainCamera: {fileID: 0}
+  shipController: {fileID: 0}
   m_Animator: {fileID: 0}
+  m_HarpoonController: {fileID: 0}
 --- !u!1 &580028172 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1003541966335834, guid: 8418297aaa6cc6a4cb259f8f6fd4a144, type: 3}
@@ -3561,15 +3564,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4263531196441134, guid: e1b9e21039285c042b92ea66c7f1c444, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.69
+      value: -0.58
       objectReference: {fileID: 0}
     - target: {fileID: 4263531196441134, guid: e1b9e21039285c042b92ea66c7f1c444, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.52
+      value: 7.04
       objectReference: {fileID: 0}
     - target: {fileID: 4263531196441134, guid: e1b9e21039285c042b92ea66c7f1c444, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.72
+      value: -4.99
       objectReference: {fileID: 0}
     - target: {fileID: 4263531196441134, guid: e1b9e21039285c042b92ea66c7f1c444, type: 3}
       propertyPath: m_LocalRotation.w

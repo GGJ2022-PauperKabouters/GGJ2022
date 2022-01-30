@@ -8,6 +8,7 @@ TagManager:
   - Buellet
   - Bullet
   - Tile
+  - Floor
   layers:
   - Default
   - TransparentFX

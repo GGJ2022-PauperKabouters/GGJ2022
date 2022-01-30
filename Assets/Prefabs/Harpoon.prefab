@@ -207,4 +207,4 @@ MonoBehaviour:
   shotDistance: 100
   shotDelay: 0
   harpoonCamera: {fileID: 3288301202841367422}
-  harpoonCrosshair: {fileID: 0}
+  harpoonCrosshair: {fileID: 447416769642307407}

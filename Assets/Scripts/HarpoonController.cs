@@ -20,12 +20,15 @@ public class HarpoonController : MonoBehaviour
     private bool _isShooting = false;
 
     private PlayerController playerController;
+
+    private Animator m_Animator;
     
     
     // Start is called before the first frame update
     void Start()
     {
         playerController = transform.parent.GetComponent<PlayerController>();
+        m_Animator = transform.parent.GetComponent<Animator>();
     }
 
     void Update()
@@ -44,14 +47,14 @@ public class HarpoonController : MonoBehaviour
             playerController.transform.eulerAngles = yRotation;
 
             //Set the harpoon blend animation parameter to blend between idle/moving animations
-            var blend = playerController.m_Animator.GetFloat("HarpoonBlend");
+            var blend = m_Animator.GetFloat("HarpoonBlend");
             if (Input.GetAxis("Horizontal") != 0)
             {
-                playerController.m_Animator.SetFloat("HarpoonBlend", Mathf.Min(blend + 3 * Time.deltaTime, 0.85f));
+                m_Animator.SetFloat("HarpoonBlend", Mathf.Min(blend + 3 * Time.deltaTime, 0.85f));
             }
             else
             {
-                playerController.m_Animator.SetFloat("HarpoonBlend", Mathf.Max(blend - 3 * Time.deltaTime, 0));
+               m_Animator.SetFloat("HarpoonBlend", Mathf.Max(blend - 3 * Time.deltaTime, 0));
             }
 
             //Deactivate the harpoon

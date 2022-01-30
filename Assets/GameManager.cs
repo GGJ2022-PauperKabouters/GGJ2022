@@ -34,7 +34,16 @@ namespace Com.MyCompany.MyGame
 
                 byte count = PhotonNetwork.CurrentRoom.PlayerCount;
                 Transform floor =  GameObject.Find("PlayerLand (" + count + ")").transform;
-                PhotonNetwork.Instantiate(this.playerPrefab.name,new Vector3(floor.position.x -1f,floor.position.y + 5f, floor.position.z -2f) , Quaternion.identity, 0);
+                Camera[] cameras = GameObject.FindObjectsOfType<Camera>();
+                for (int i = 0; i < cameras.Length; i++)
+                {
+                    Camera cam = cameras[i];
+                    cam.enabled = false;
+                }
+                GameObject.Find("Camera ("+count + ")").gameObject.SetActive(true);
+                
+                PhotonNetwork.Instantiate(this.playerPrefab.name,new Vector3(floor.localPosition.x,floor.localPosition.y + 5f, floor.position.z +1f) , Quaternion.identity, 0);
+
             }
             else
             {

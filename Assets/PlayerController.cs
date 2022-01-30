@@ -6,12 +6,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviourPun
 {
+    [HideInInspector]
     public GameObject LocalPlayerInstance;
     private bool canMove = true;
 
-    public int moveForce;
-    public float jumpForce;
-    public Transform meshTransform;
+    public float moveModifier;
+    public float jumpModifier;
     public float raycastDist;
 
     public Camera mainCamera;
@@ -25,12 +25,14 @@ public class PlayerController : MonoBehaviourPun
     #endregion
     // Start is called before the first frame update
     Rigidbody m_Rigidbody;
-    public Animator m_Animator;
-    public HarpoonController m_HarpoonController;
+    private Animator m_Animator;
+    private HarpoonController m_HarpoonController;
 
     private GameObject playermanager;
     void Start()
     {
+        m_Animator = GetComponent<Animator>();
+        m_HarpoonController = GetComponent<HarpoonController>();
         // Start is called before the first frame update
     }
 
@@ -69,33 +71,25 @@ public class PlayerController : MonoBehaviourPun
 
             if (canMove)
             {
-                if (Input.GetAxis("Vertical") > 0)
+                if (Input.GetAxis("Vertical") > 0 && _isGrounded())
                 {
 
-                    m_Rigidbody.AddForce(Vector3.forward * moveForce);
+                    transform.Translate(Vector3.forward * moveModifier);
                 }
-                if (Input.GetAxis("Horizontal") < 0)
+                if (Input.GetAxis("Vertical") < 0 && _isGrounded())
                 {
-                    m_Rigidbody.AddForce(Vector3.left * moveForce);
+                    transform.Translate(-Vector3.forward * moveModifier);
                 }
-                if (Input.GetAxis("Horizontal") > 0)
+                if (Input.GetAxis("Horizontal") > 0 && _isGrounded())
                 {
-                    m_Rigidbody.AddForce(Vector3.right * moveForce);
+                    transform.Translate(Vector3.right * moveModifier);
                 }
-                if (Input.GetAxis("Vertical") < 0)
+                if (Input.GetAxis("Horizontal") < 0 && _isGrounded())
                 {
-                    m_Rigidbody.AddForce(-Vector3.forward * moveForce);
+                    transform.Translate(Vector3.left * moveModifier);
                 }
 
-                if (Input.GetKeyDown(KeyCode.Space) && _isGrounded())
-                {
-                    Debug.Log("Jumping");
-                    var velocity = m_Rigidbody.velocity;
-                    velocity.y = 0;
-                    m_Rigidbody.velocity = velocity;
-                    m_Rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
-                    m_Animator.SetTrigger("Jump");
-                }
+               
                 
             }
         }
@@ -117,13 +111,22 @@ public class PlayerController : MonoBehaviourPun
                     setLocalPlayerCanMove(false);
                     SetHarpoonMode(true);
                 }
+                if (Input.GetKeyDown(KeyCode.Space) && _isGrounded())
+                {
+                    Debug.Log("Jumping");
+                    var velocity = m_Rigidbody.velocity;
+                    velocity.y = 0;
+                    m_Rigidbody.velocity = velocity;
+                    m_Rigidbody.AddForce(Vector3.up * jumpModifier, ForceMode.VelocityChange);
+                    m_Animator.SetTrigger("Jump");
+                }
             }
         }
     }
 
     private bool _isGrounded()
     {
-        return Physics.Raycast(transform.position, Vector3.down, raycastDist, LayerMask.GetMask("Floor"));
+        return transform.position.y > 14.8;
     }
     
     public void setLocalPlayerCanMove(bool value)

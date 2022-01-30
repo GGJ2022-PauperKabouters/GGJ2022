@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviourPun
     public Transform meshTransform;
     public float raycastDist;
 
+    public Camera mainCamera;
+
     #region private fields
 
 
@@ -22,6 +24,7 @@ public class PlayerController : MonoBehaviourPun
     // Start is called before the first frame update
     Rigidbody m_Rigidbody;
     public Animator m_Animator;
+    public HarpoonController m_HarpoonController;
 
     private GameObject playermanager;
     void Start()
@@ -33,6 +36,7 @@ public class PlayerController : MonoBehaviourPun
         private void Awake()
         {
             m_Rigidbody = gameObject.GetComponent<Rigidbody>();
+            
             // #Important
             // used in GameManager.cs: we keep track of the localPlayer instance to prevent instantiation when levels are synchronized
             if (photonView.IsMine)
@@ -100,6 +104,21 @@ public class PlayerController : MonoBehaviourPun
         //meshTransform.rotation = Quaternion.Euler(new Vector3(0,0, 0));
     }
 
+    void Update()
+    {
+        if (photonView.IsMine)
+        {
+            if (canMove)
+            {
+                if (Input.GetKeyDown(KeyCode.Q))
+                {
+                    setLocalPlayerCanMove(false);
+                    SetHarpoonMode(true);
+                }
+            }
+        }
+    }
+
     private bool _isGrounded()
     {
         return Physics.Raycast(transform.position, Vector3.down, raycastDist, LayerMask.GetMask("Floor"));
@@ -108,5 +127,34 @@ public class PlayerController : MonoBehaviourPun
     public void setLocalPlayerCanMove(bool value)
     {
         LocalPlayerInstance.GetComponent<PlayerController>().canMove = value;
+    }
+
+    public void SetHarpoonMode(bool value)
+    {
+        m_Animator.SetTrigger(value ? "HarpoonActivate" : "HarpoonDeactivate");
+        StartCoroutine(HarpoonTransition(value));
+    }
+
+    private IEnumerator HarpoonTransition(bool activated)
+    {
+        m_HarpoonController.harpoonCamera.gameObject.SetActive(activated);
+        mainCamera.enabled = !activated;
+        
+        // Wait for the transition animation to complete before the player can move again
+        yield return new WaitForSeconds(0.25f);
+
+        if (activated)
+        {
+            m_HarpoonController.SetActive(true);
+        }
+        else
+        {
+            setLocalPlayerCanMove(true);
+        }
+    }
+
+    public void OnTileObtained()
+    {
+        Debug.Log("Player obtained a tile!");
     }
 }

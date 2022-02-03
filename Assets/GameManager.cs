@@ -34,30 +34,40 @@ namespace Com.MyCompany.MyGame
 
                 byte count = PhotonNetwork.CurrentRoom.PlayerCount;
                 Transform floor =  GameObject.Find("PlayerLand (" + count + ")").transform;
+
+               
+
                 Camera[] cameras = GameObject.FindObjectsOfType<Camera>();
-                Camera cam;
+                Camera cam = new Camera() ;
                 for (int i = 0; i < cameras.Length; i++)
                 {
                     cam = cameras[i];
                     if (cam.name == "Camera (" + count + ")")
                     {
+                        foreach (CannonController controller in floor.GetComponentsInChildren<CannonController>())
+                        {
+                            controller.maincamera = cam;
+                        }
                         cam.enabled = true;
+                        AudioListener listener = cam.gameObject.AddComponent<AudioListener>();
+                        listener.enabled = true;
+                       
 
-                        GameObject playerObj = PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(floor.localPosition.x, floor.localPosition.y + 5f, floor.position.z + 1f), Quaternion.Euler(cam.transform.forward), 0);
-                  
-                        playerObj.GetComponentInChildren<PlayerController>().shipController = floor.GetComponent<ShipController>();
-                        
-                        return;
+
+                        break;
                     }
                     else
                     {
                         cam.enabled = false;
                     }
                 }
-                
-                
-                
-               
+
+                GameObject playerObj = PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(floor.localPosition.x, floor.localPosition.y + 5f, floor.position.z + 1f), Quaternion.Euler(cam.transform.localEulerAngles), 0);
+
+                playerObj.GetComponentInChildren<PlayerController>().shipController = floor.GetComponent<ShipController>();
+
+
+
 
             }
             else

@@ -28,15 +28,19 @@ public class CannonController : MonoBehaviour
 
     private GameObject localPlayer;
 
+    [HideInInspector]
     public Camera maincamera;
 
     public Camera cannoncamera;
+
+    private float timeCharged = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         initialRotation = SteerPivot.eulerAngles;
-        
+       
+
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -75,7 +79,12 @@ public class CannonController : MonoBehaviour
 
             transform.rotation = Quaternion.Euler(yRotation);
 
-        
+            if (Input.GetKey(KeyCode.Space))
+            {
+                timeCharged += 0.016f;
+                Debug.Log(timeCharged);
+                
+            }
 
         }
     }
@@ -91,13 +100,21 @@ public class CannonController : MonoBehaviour
                     localPlayer = o;
                 }
             }
+            if (inUse)
+            {
+                if (Input.GetKeyUp(KeyCode.Space))
+                {
+                    SpawnBullet();
+                    timeCharged = 0;
+                }
+            }
 
         }
 
         if (inUse)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-                SpawnBullet();
+           
+                
         }
 
         checkUseCannon();
@@ -117,7 +134,9 @@ public class CannonController : MonoBehaviour
 
         GameObject spawned = PhotonNetwork.Instantiate("CannonBall", BulletSpawnPoint.position, SteerPivot.rotation);
 
-        spawned.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0,1,0) * ShotVelocity, ForceMode.VelocityChange);
+        float charged = Mathf.Clamp(timeCharged, 0, 1);
+        float newShotVelocity = charged * ShotVelocity;
+        spawned.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0,1,0) * newShotVelocity, ForceMode.VelocityChange);
     }
 
     private GameObject showTooltip()

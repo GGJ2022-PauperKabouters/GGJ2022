@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
+using Photon.Pun;
 using UnityEngine;
 
 public class TileSpawnPoint : MonoBehaviour
 {
     [Tooltip("Sets the importance of this tile for the survivability of the ship to make it respawn quicker.")]
     public SpawnPriority spawnPriority;
-
-    public GameObject LightAnimPrefab;
     
     // The tile object (if any) that is currently occupying this spawn point
     public GameObject TileObject;
@@ -55,9 +54,10 @@ public class TileSpawnPoint : MonoBehaviour
         return output;
     }
 
-    public void SpawnTile(GameObject tilePrefab, Transform parent)
+    public void SpawnTile(GameObject tilePrefab)
     {
-        TileObject = Instantiate(tilePrefab, transform.position, Quaternion.identity, parent);
+        Debug.Log(transform.gameObject.name + " rotation: " + transform.parent.parent.transform.localEulerAngles);
+        TileObject = PhotonNetwork.Instantiate(tilePrefab.name, transform.position, Quaternion.Euler(transform.parent.parent.localEulerAngles.x, transform.parent.parent.localEulerAngles.y, transform.parent.parent.localEulerAngles.z)) ;
 
         // Do the bouncing scale Y animation
         var initialScale = TileObject.transform.localScale;
@@ -66,7 +66,7 @@ public class TileSpawnPoint : MonoBehaviour
 
         
         // Do the light circle animation
-        GameObject LightFX = Instantiate(LightAnimPrefab, transform.position, Quaternion.identity, parent);
+        GameObject LightFX = PhotonNetwork.Instantiate("TileLightEffect", transform.position, Quaternion.Euler(transform.rotation.x, transform.rotation.y, transform.rotation.z));
         
         var lightScale = LightFX.transform.GetChild(0).localScale;
         LightFX.transform.GetChild(0).localScale = new Vector3(lightScale.x, 0f, lightScale.z);

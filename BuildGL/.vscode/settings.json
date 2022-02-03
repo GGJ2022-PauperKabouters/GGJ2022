@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/685e1f35-d184-402b-9a77-d1f9bceb9026/resourceGroups/IslandChompers_group/providers/Microsoft.Web/sites/IslandChompers",
+    "appService.deploySubpath": "."
+}

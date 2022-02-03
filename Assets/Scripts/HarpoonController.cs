@@ -37,11 +37,12 @@ public class HarpoonController : MonoBehaviour
         {
             //For vertical aiming, move the crosshair position up/down
             Vector3 aimPosition = harpoonCrosshair.localPosition;
-            aimPosition.y = Mathf.Clamp(aimPosition.y + Input.GetAxis("Vertical") * verticalSteer * Time.deltaTime, 0, 5);
+            aimPosition.y = aimPosition.y + Input.GetAxis("Vertical") * (verticalSteer/2f) * Time.deltaTime;
 
             //For horizontal aiming, rotate the player object.
             Vector3 yRotation = playerController.transform.rotation.eulerAngles;
             yRotation.y += Input.GetAxis("Horizontal") * horizontalSteer * Time.deltaTime;
+            yRotation.x += Input.GetAxis("Vertical") * -horizontalSteer * Time.deltaTime;
 
             harpoonCrosshair.localPosition = aimPosition;
             playerController.transform.eulerAngles = yRotation;
@@ -88,7 +89,7 @@ public class HarpoonController : MonoBehaviour
         if (Physics.BoxCast(harpoonCrosshair.transform.position, new Vector3(boxExtents, boxExtents, boxExtents), aimDirection, out hit, Quaternion.identity, shotDistance, LayerMask.GetMask("Floor")))
         {
             hit.transform.GetComponent<FloatingTile>().OnHarpoonHit(playerController.transform);
-            
+            Debug.Log("hit tile");            
             yield return new WaitForSeconds(shotDelay);
         }
         
